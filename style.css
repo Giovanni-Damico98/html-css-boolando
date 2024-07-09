@@ -43,5 +43,53 @@ header div img {
 
 /* Main */
 main {
-    padding: 80px;
+    padding: 100px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.card {
+    position: relative;
+}
+
+.card img {
+    height: 430px;
+    width: 0 auto;
+}
+
+.card-details {
+    font-size: 10px;
+}
+
+.new-price {
+    font-weight: bold;
+    color: red;
+}
+
+.old-price {
+    text-decoration: line-through;
+}
+
+.small-box {
+    font-size: 12px;
+    position: absolute;
+    bottom: 100px;
+    color: white;
+    font-weight: bold;
+    padding: 2px 3px;
+}
+
+.discount {
+    left: 0px;
+    background-color: red;
+}
+
+.sustainability {
+    left: 35px;
+    background-color: green;
 }
