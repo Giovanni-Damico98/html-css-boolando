@@ -10,7 +10,8 @@ body {
     font-family: sans-serif;
 }
 
-/* Header */
+/* HEADER */
+/* Stili per l'header */
 header {
     display: flex;
     position: fixed;
@@ -23,23 +24,25 @@ header {
     z-index: 1;
 }
 
-/* Altezza logo header */
+/* Altezza del logo nell'header */
 header div img {
     height: 25px;
 }
 
-/* Classe per gestire i link */
+/* Stili per i link */
 .link {
     color: white;
     text-decoration: none;
     font-size: 12px;
 }
 
-/* Main */
+/* MAIN */
+/* Stili per il contenuto principale */
 main {
     padding: 100px;
 }
 
+/* Stili per il contenitore dei prodotti */
 .products {
     display: flex;
     flex-wrap: wrap;
@@ -47,28 +50,78 @@ main {
     gap: 15px;
 }
 
+/* Stili per ogni card di prodotto */
 .card {
     position: relative;
 }
 
+/* Stili per le immagini all'interno delle card */
 .card img {
     height: 430px;
-    width: 0 auto;
+    width: 100%;
+    display: block;
 }
 
+/* Effetto overlay sull'immagine di sfondo delle card */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 430px;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+}
+
+/* Mostra l'immagine di sfondo quando si passa sopra alla card */
+.card:hover::before {
+    opacity: 1;
+}
+
+/* Stili per le singole card quando si passa sopra */
+.first-card:hover::before {
+    background-image: url(img/1b.webp);
+}
+
+.second-card:hover::before {
+    background-image: url(img/2b.webp);
+}
+
+.third-card:hover::before {
+    background-image: url(img/3b.webp);
+}
+
+.fourth-card:hover::before {
+    background-image: url(img/4b.webp);
+}
+
+.fifth-card:hover::before {
+    background-image: url(img/5b.webp);
+}
+
+.sixth-card:hover::before {
+    background-image: url(img/6b.webp);
+}
+
+/* Stili per i dettagli dei prodotti all'interno delle card */
 .card-details {
     font-size: 10px;
 }
 
+/* Stili per il prezzo del prodotto */
 .new-price {
     font-weight: bold;
     color: red;
 }
 
+/* Stili per il prezzo barrato */
 .old-price {
     text-decoration: line-through;
 }
 
+/* Stili per i piccoli box di testo posizionati in basso a sinistra delle card */
 .small-box {
     font-size: 10px;
     position: absolute;
@@ -78,31 +131,43 @@ main {
     padding: 2px 3px;
 }
 
+/* Stili per l'icona preferiti */
 .favourites {
+    align-self: center;
     font-size: 15px;
     color: black;
     background-color: white;
     padding: 10px 10px;
-    right: 0;
+    right: 8px;
     top: 10px;
     bottom: 428px;
+    cursor: pointer;
 }
 
+/* Cambio colore icona preferiti quando si passa sopra */
+.favourites:hover {
+    color: red;
+}
+
+/* Stili per il box di sconto */
 .discount {
     left: 0px;
     background-color: red;
 }
 
+/* Stili per il box di sostenibilità */
 .sustainability {
     left: 35px;
     background-color: green;
 }
 
+/* Stili per l'ultima card nel layout */
 #last-card {
     left: 0;
 }
 
 /* FOOTER */
+/* Stili per il footer */
 footer {
     display: flex;
     justify-content: space-around;
@@ -115,6 +180,7 @@ footer {
     box-shadow: 5px -6px 5px lightgray;
 }
 
+/* Stili per i social media nel footer */
 .footer-social {
     text-align: center;
 }
